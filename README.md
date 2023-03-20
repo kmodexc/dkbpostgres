@@ -11,8 +11,8 @@ Import the bookings from DKB.
 Download the repo:
 
 ```
-git clone 
-cd 
+git clone https://github.com/kmodexc/dkbpostgres.git
+cd dkbpostgres
 ```
 
 Export the bookings from the website to csv. Download them and move them in this folder. 
