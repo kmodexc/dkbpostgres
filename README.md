@@ -18,10 +18,15 @@ cd dkbpostgres
 Export the bookings from the website to csv. Download them and move them in this folder. 
 Everything above the data of the file, including the header. 
 
-Then execute these docker commands:
+Then start the postgres server with this command:
 
 ```
 docker run -v ${PWD}:/workspace --rm -d -p5432:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres
+````
+
+Import the data with this command:
+
+```
 docker run -v ${PWD}:/workspace --rm --network host -it postgres psql postgresql://postgres:mysecretpassword@localhost:5432 -f /workspace/create.sql
 ```
 
